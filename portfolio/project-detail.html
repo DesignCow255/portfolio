@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">Portfolio</div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="navMenu">
+          <a href="index.html">Home</a>
+          <a href="work.html">Work</a>
+          <a href="category.html" class="active">Categories</a>
+          <a href="cv.html">CV</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1 id="project-title">Project Title</h1>
+          <p id="project-subtitle">Project subtitle and key information</p>
+          <div id="breadcrumb">
+            <a href="category.html">Categories</a> →
+            <a href="#" id="category-link">Category</a> →
+            <a href="#" id="type-link">Type</a> →
+            <span id="project-name">Project</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-detail">
+        <div class="container">
+          <div class="project-content">
+            <div class="project-image">
+              <img
+                id="main-project-image"
+                src="https://picsum.photos/800/500?random=1001"
+                alt="Project main image"
+              />
+            </div>
+            <div class="project-info">
+              <h2>Project Overview</h2>
+              <div id="project-description">
+                <p>
+                  This is a detailed description of the project, including the
+                  objectives, challenges, and solutions implemented.
+                </p>
+                <p>
+                  The project involved careful consideration of user needs,
+                  technical constraints, and aesthetic requirements to deliver a
+                  successful outcome.
+                </p>
+              </div>
+
+              <h3>Key Features</h3>
+              <ul class="features-list" id="project-features">
+                <li>Innovative design approach</li>
+                <li>User-centered methodology</li>
+                <li>Technical excellence</li>
+                <li>Measurable results</li>
+              </ul>
+
+              <h3>Technologies & Tools</h3>
+              <div class="tech-stack" id="project-tech">
+                <span class="tech-tag">Design</span>
+                <span class="tech-tag">Development</span>
+                <span class="tech-tag">Strategy</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="#" id="back-to-projects" class="back-button"
+                  >← Back to Projects</a
+                >
+                <a href="#" class="cta-button primary">View Live Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional project images -->
+          <div class="project-gallery">
+            <h3>Project Gallery</h3>
+            <div class="gallery-grid">
+              <img
+                src="https://picsum.photos/400/250?random=1002"
+                alt="Project image 1"
+              />
+              <img
+                src="https://picsum.photos/400/250?random=1003"
+                alt="Project image 2"
+              />
+              <img
+                src="https://picsum.photos/400/250?random=1004"
+                alt="Project image 3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Portfolio. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="GitHub">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Dynamic project content based on URL parameter
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get("id");
+
+        if (projectId) {
+          // Sample project data - in a real application, this would come from a database or API
+          const projects = {
+            1: {
+              title: "Modern Brand Identity",
+              subtitle: "Complete brand refresh for a tech startup",
+              category: "branding",
+              type: "refresh",
+              description:
+                "A comprehensive brand identity project that involved logo design, color palette development, typography selection, and brand guidelines creation. The project focused on creating a modern, trustworthy brand that would appeal to both consumers and investors.",
+              features: [
+                "Logo design with multiple variations",
+                "Complete brand guidelines document",
+                "Business card and stationery design",
+                "Brand application examples",
+              ],
+              tech: [
+                "Adobe Illustrator",
+                "Adobe InDesign",
+                "Figma",
+                "Brand Strategy",
+              ],
+              images: ["1001", "1002", "1003", "1004"],
+            },
+            2: {
+              title: "E-commerce Website Design",
+              subtitle: "User-friendly online shopping experience",
+              category: "digital",
+              type: "homepage",
+              description:
+                "A responsive e-commerce website design that prioritizes user experience and conversion optimization. The design includes intuitive navigation, clear product presentation, and a streamlined checkout process.",
+              features: [
+                "Responsive design for all devices",
+                "Intuitive product browsing",
+                "Streamlined checkout flow",
+                "SEO-optimized structure",
+              ],
+              tech: ["Figma", "Adobe XD", "HTML/CSS", "JavaScript"],
+              images: ["1005", "1006", "1007", "1008"],
+            },
+            3: {
+              title: "Mobile App UI Design",
+              subtitle: "Fitness tracking app interface",
+              category: "uiux",
+              type: "prototypes",
+              description:
+                "A comprehensive mobile app design for fitness tracking, featuring clean interfaces, intuitive navigation, and engaging visual elements. The design emphasizes user motivation and data visualization.",
+              features: [
+                "User flow optimization",
+                "Interactive prototypes",
+                "Data visualization",
+                "Accessibility compliance",
+              ],
+              tech: ["Figma", "Principle", "Sketch", "InVision"],
+              images: ["1009", "1010", "1011", "1012"],
+            },
+            4: {
+              title: "Magazine Layout Design",
+              subtitle: "Editorial design for lifestyle publication",
+              category: "print",
+              type: "magazines",
+              description:
+                "A sophisticated magazine layout design that balances readability with visual appeal. The design includes custom typography, grid systems, and engaging visual hierarchies.",
+              features: [
+                "Custom grid system",
+                "Typography hierarchy",
+                "Visual storytelling",
+                "Print-ready files",
+              ],
+              tech: ["Adobe InDesign", "Adobe Illustrator", "Adobe Photoshop"],
+              images: ["1013", "1014", "1015", "1016"],
+            },
+            5: {
+              title: "Logo Animation",
+              subtitle: "Dynamic brand introduction video",
+              category: "motion",
+              type: "logo",
+              description:
+                "A captivating logo animation that introduces the brand identity through motion graphics. The animation combines typography, iconography, and sound design for maximum impact.",
+              features: [
+                "2D motion graphics",
+                "Typography animation",
+                "Sound design integration",
+                "Multiple format exports",
+              ],
+              tech: ["After Effects", "Cinema 4D", "Adobe Audition"],
+              images: ["1017", "1018", "1019", "1020"],
+            },
+            6: {
+              title: "Social Media Campaign",
+              subtitle: "Brand awareness campaign for fashion retailer",
+              category: "social",
+              type: "campaign",
+              description:
+                "A comprehensive social media campaign that increased brand awareness by 150%. The campaign included custom graphics, video content, and strategic posting schedules across multiple platforms.",
+              features: [
+                "Multi-platform strategy",
+                "Custom graphic design",
+                "Video content creation",
+                "Performance analytics",
+              ],
+              tech: [
+                "Adobe Creative Suite",
+                "Canva",
+                "Hootsuite",
+                "Google Analytics",
+              ],
+              images: ["1021", "1022", "1023", "1024"],
+            },
+          };
+
+          const project = projects[projectId];
+          if (project) {
+            // Update page content
+            document.getElementById("project-title").textContent =
+              project.title;
+            document.getElementById("project-subtitle").textContent =
+              project.subtitle;
+            document.getElementById("project-name").textContent = project.title;
+
+            // Update breadcrumb
+            const categoryLink = document.getElementById("category-link");
+            categoryLink.textContent =
+              project.category.charAt(0).toUpperCase() +
+              project.category.slice(1);
+            categoryLink.href = `${project.category}-types.html`;
+
+            const typeLink = document.getElementById("type-link");
+            typeLink.textContent =
+              project.type.charAt(0).toUpperCase() + project.type.slice(1);
+            typeLink.href = `projects.html?category=${project.category}&type=${project.type}`;
+
+            // Update back link
+            document.getElementById("back-to-projects").href =
+              `projects.html?category=${project.category}&type=${project.type}`;
+
+            // Update description
+            document.getElementById("project-description").innerHTML =
+              project.description
+                .split("\n")
+                .map((p) => `<p>${p}</p>`)
+                .join("");
+
+            // Update features
+            const featuresList = document.getElementById("project-features");
+            featuresList.innerHTML = project.features
+              .map((feature) => `<li>${feature}</li>`)
+              .join("");
+
+            // Update tech stack
+            const techStack = document.getElementById("project-tech");
+            techStack.innerHTML = project.tech
+              .map((tech) => `<span class="tech-tag">${tech}</span>`)
+              .join("");
+
+            // Update main image
+            document.getElementById("main-project-image").src =
+              `https://picsum.photos/800/500?random=${project.images[0]}`;
+
+            // Update gallery images
+            const galleryImages =
+              document.querySelectorAll(".gallery-grid img");
+            galleryImages.forEach((img, index) => {
+              if (project.images[index + 1]) {
+                img.src = `https://picsum.photos/400/250?random=${project.images[index + 1]}`;
+              }
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

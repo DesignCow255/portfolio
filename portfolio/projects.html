@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">Portfolio</div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="navMenu">
+          <a href="index.html">Home</a>
+          <a href="work.html">Work</a>
+          <a href="category.html" class="active">Categories</a>
+          <a href="cv.html">CV</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1 id="page-title">Projects</h1>
+          <p id="page-description">Explore our design projects</p>
+          <div id="breadcrumb">
+            <a href="category.html">Categories</a> →
+            <a href="#" id="category-link">Category</a> →
+            <span id="type-text">Type</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-portfolio">
+        <div class="container">
+          <div class="work-grid" id="projects-grid">
+            <!-- Projects will be dynamically loaded here -->
+            <article class="work-card">
+              <div class="card-content">
+                <h3>Sample Project 1</h3>
+                <p>
+                  A beautiful design project showcasing creativity and skill
+                </p>
+                <a href="project-detail.html?id=1" class="card-link"
+                  >View Details →</a
+                >
+              </div>
+            </article>
+            <article class="work-card">
+              <div class="card-content">
+                <h3>Sample Project 2</h3>
+                <p>An innovative solution to a design challenge</p>
+                <a href="project-detail.html?id=2" class="card-link"
+                  >View Details →</a
+                >
+              </div>
+            </article>
+            <article class="work-card">
+              <div class="card-content">
+                <h3>Sample Project 3</h3>
+                <p>Creative visual communication and branding work</p>
+                <a href="project-detail.html?id=3" class="card-link"
+                  >View Details →</a
+                >
+              </div>
+            </article>
+            <article class="work-card">
+              <div class="card-content">
+                <h3>Sample Project 4</h3>
+                <p>Modern design approach with cutting-edge techniques</p>
+                <a href="project-detail.html?id=4" class="card-link"
+                  >View Details →</a
+                >
+              </div>
+            </article>
+            <article class="work-card">
+              <div class="card-content">
+                <h3>Sample Project 5</h3>
+                <p>User-centered design with exceptional attention to detail</p>
+                <a href="project-detail.html?id=5" class="card-link"
+                  >View Details →</a
+                >
+              </div>
+            </article>
+            <article class="work-card">
+              <div class="card-content">
+                <h3>Sample Project 6</h3>
+                <p>Strategic design thinking applied to real-world problems</p>
+                <a href="project-detail.html?id=6" class="card-link"
+                  >View Details →</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Portfolio. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="GitHub">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Dynamic page content based on URL parameters
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get("category");
+        const type = urlParams.get("type");
+
+        if (category && type) {
+          // Update page title and description
+          const categoryNames = {
+            branding: "Branding & Identity",
+            print: "Print Design",
+            digital: "Digital & Web Design",
+            uiux: "UI/UX Design",
+            illustration: "Illustration",
+            motion: "Motion & Animation",
+            social: "Social Media & Marketing",
+            product: "Product & Merchandise Design",
+            typography: "Typography & Lettering",
+            photography: "Photography & Retouching",
+            environmental: "Environmental & Spatial Design",
+            presentation: "Presentation & Pitch Decks",
+            case: "Case Studies",
+            experimental: "Experimental / Passion Projects",
+          };
+
+          const typeNames = {
+            // Branding types
+            logo: "Logo Design",
+            guidelines: "Brand Guidelines",
+            stationery: "Business Stationery",
+            moodboards: "Brand Mood Boards",
+            refresh: "Brand Refresh",
+            // Print types
+            brochures: "Brochures & Flyers",
+            magazines: "Magazines & Editorial",
+            packaging: "Packaging Design",
+            books: "Book Covers & Layouts",
+            largeformat: "Large-Format Prints",
+            // Digital types
+            homepage: "Website Homepage",
+            mobile: "Mobile App Screens",
+            email: "Email Newsletters",
+            banners: "Banner Ads",
+            dashboard: "Dashboard Interfaces",
+            // UI/UX types
+            flows: "User Flow Diagrams",
+            wireframes: "Wireframes",
+            prototypes: "High-Fidelity Prototypes",
+            testing: "Usability Testing",
+            systems: "Design Systems",
+            // Illustration types
+            icons: "Custom Icons",
+            editorial: "Editorial Illustrations",
+            character: "Character Design",
+            infographics: "Infographics",
+            handdrawn: "Hand-Drawn Art",
+            // Motion types
+            logo: "Logo Animations",
+            explainer: "Explainer Videos",
+            social: "Social Media Animation",
+            typography: "Kinetic Typography",
+            micro: "UI Micro-interactions",
+            // Social types
+            instagram: "Instagram Templates",
+            carousel: "Carousel Graphics",
+            youtube: "YouTube Thumbnails",
+            ads: "Social Media Ads",
+            campaign: "Campaign Visuals",
+          };
+
+          const categoryName = categoryNames[category] || category;
+          const typeName = typeNames[type] || type;
+
+          document.getElementById("page-title").textContent =
+            `${typeName} Projects`;
+          document.getElementById("page-description").textContent =
+            `Explore our ${typeName.toLowerCase()} projects in ${categoryName.toLowerCase()}`;
+
+          const categoryLink = document.getElementById("category-link");
+          categoryLink.textContent = categoryName;
+          categoryLink.href = `${category}-types.html`;
+
+          document.getElementById("type-text").textContent = typeName;
+        }
+      });
+    </script>
+  </body>
+</html>
