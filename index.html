@@ -3,81 +3,247 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Home</title>
+    <meta
+      name="description"
+      content="Edmund Kiyanga - Creative Marketing Director specializing in brand storytelling, campaign development, and visual narratives across digital, print, and video media."
+    />
+    <meta
+      name="keywords"
+      content="creative marketing director, brand storytelling, campaign development, visual design, digital marketing, print design, video production"
+    />
+    <meta name="author" content="Edmund Kiyanga" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Edmund Kiyanga — Creative Marketing Director"
+    />
+    <meta
+      property="og:description"
+      content="Creative Marketing Director specializing in brand storytelling and campaign development. Transforming ideas into impactful visual narratives."
+    />
+    <meta property="og:image" content="../img/ehk.jpg" />
+    <meta property="og:url" content="https://edmundkiyanga.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://edmundkiyanga.com" />
+    <title>Edmund Kiyanga — Creative Marketing Director</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
-  </head>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+  
+    <meta name="description" content="Edmund Kiyanga - Creative Marketing Director specializing in brand storytelling and campaign development." />
+    <meta name="keywords" content="creative marketing director, brand strategy, campaign development, visual design" />
+    <meta name="author" content="Edmund Kiyanga" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Edmund Kiyanga — Creative Marketing Director" />
+    <meta property="og:description" content="Edmund Kiyanga - Creative Marketing Director specializing in brand storytelling and campaign development." />
+    <meta property="og:image" content="../img/ehk.jpg" />
+    <meta property="og:url" content="https://edmundkiyanga.com/index.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://edmundkiyanga.com/index.html" /></head>
   <body>
     <header>
       <div class="container">
-        <div class="logo">Portfolio</div>
+        <div class="logo">
+          <i class="fas fa-palette"></i>
+          Edmund Kiyanga
+        </div>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
         <nav id="navMenu">
-          <a href="index.html" class="active">Home</a>
-          <a href="work.html">Work</a>
-          <a href="category.html">Categories</a>
-          <a href="cv.html">CV</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a href="index.html" class="active"
+            ><i class="fas fa-home"></i> Home</a
+          >
+          <a href="work.html"><i class="fas fa-briefcase"></i> Work</a>
+          <a href="category.html"><i class="fas fa-th-large"></i> Categories</a>
+          <a href="cv.html"><i class="fas fa-file-alt"></i> CV</a>
+          <a href="about.html"><i class="fas fa-user"></i> About</a>
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container hero-container">
-          <div class="hero-content">
-            <h1>Hi, I'm Edmund</h1>
-            <p class="hero-subtitle">Creative Designer & Developer</p>
-            <p class="hero-description">
-              I create beautiful, responsive digital experiences that bring
-              ideas to life. Passionate about clean code, user-centered design,
-              and innovative solutions.
+      <section class="hero parallax-section" data-parallax="hero">
+        <div class="parallax-bg" data-parallax-bg></div>
+        <div class="container hero__grid">
+          <div
+            class="hero__text animate-on-scroll"
+            data-animation="fade-in-left"
+          >
+            <div class="hero__kicker">
+              <i class="fas fa-star"></i>
+              Welcome
+            </div>
+            <h1 class="hero__title">Edmund <br /><span>Kiyanga</span></h1>
+            <p class="hero__subtitle">
+              Creative Marketing Director specializing in brand storytelling and
+              campaign development. Transforming ideas into impactful visual
+              narratives across digital, print, and video media.
             </p>
-            <div class="hero-buttons">
-              <a href="work.html" class="cta-button primary">Explore My Work</a>
-              <a href="cv.html" class="cta-button secondary">View My CV</a>
+            <div class="hero__actions">
+              <a href="work.html" class="btn-filled">
+                <i class="fas fa-arrow-right"></i> Explore My Work
+              </a>
+              <a href="contact.html" class="btn-ghost">
+                <i class="fas fa-paper-plane"></i> Let's Connect
+              </a>
+            </div>
+            <div class="hero__stats">
+              <div class="stat">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Years Exp</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Clients</span>
+              </div>
             </div>
           </div>
-          <div class="hero-image">
-            <img
-              src="../img/ehk.jpg"
-              alt="Professional headshot of [Your Name]"
-              class="profile-image"
-              loading="eager"
-            />
+          <div
+            class="hero__media animate-on-scroll"
+            data-animation="fade-in-right"
+          >
+            <div class="hero-image-container">
+              <img
+                src="../img/ehk.jpg"
+                alt="Edmund Kiyanga - Creative Marketing Director"
+                class="hero-image"
+              />
+              <div class="hero-image-overlay"></div>
+            </div>
           </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+          <span>Scroll Down</span>
         </div>
       </section>
 
-      <section class="featured-work">
+      <section
+        class="featured-work animate-on-scroll"
+        data-animation="fade-in-up"
+      >
         <div class="container">
-          <h2>Featured Projects</h2>
+          <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">
+              Showcasing my latest creative work and successful campaigns
+            </p>
+          </div>
           <div class="work-grid">
-            <article class="work-card">
+            <article
+              class="work-card animate-on-scroll"
+              data-animation="slide-up"
+              data-delay="100"
+            >
+              <div class="card-image">
+                <img
+                  src="../img/placeholder-project1.jpg"
+                  alt="Brand Identity Project"
+                />
+                <div class="card-overlay">
+                  <div class="card-category">
+                    <i class="fas fa-palette"></i> Branding
+                  </div>
+                </div>
+              </div>
               <div class="card-content">
-                <h3>Project One</h3>
-                <p>An amazing project showcasing my skills</p>
-                <a href="project.html" class="card-link">View Project →</a>
+                <h3>Brand Identity Redesign</h3>
+                <p>
+                  Complete brand transformation for a tech startup, including
+                  logo design, color palette, and brand guidelines.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">Logo Design</span>
+                  <span class="tag">Brand Strategy</span>
+                  <span class="tag">Print Design</span>
+                </div>
+                <a href="project.html" class="card-link">
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
               </div>
             </article>
-            <article class="work-card">
+            <article
+              class="work-card animate-on-scroll"
+              data-animation="slide-up"
+              data-delay="200"
+            >
+              <div class="card-image">
+                <img
+                  src="../img/placeholder-project2.jpg"
+                  alt="Digital Campaign Project"
+                />
+                <div class="card-overlay">
+                  <div class="card-category">
+                    <i class="fas fa-mobile-alt"></i> Digital
+                  </div>
+                </div>
+              </div>
               <div class="card-content">
-                <h3>Project Two</h3>
-                <p>Another impressive work example</p>
-                <a href="project.html" class="card-link">View Project →</a>
+                <h3>Social Media Campaign</h3>
+                <p>
+                  Multi-platform digital campaign that increased engagement by
+                  300% and drove significant brand awareness.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">Social Media</span>
+                  <span class="tag">Content Strategy</span>
+                  <span class="tag">Analytics</span>
+                </div>
+                <a href="project.html" class="card-link">
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
               </div>
             </article>
-            <article class="work-card">
+            <article
+              class="work-card animate-on-scroll"
+              data-animation="slide-up"
+              data-delay="300"
+            >
+              <div class="card-image">
+                <img
+                  src="../img/placeholder-project3.jpg"
+                  alt="Video Production Project"
+                />
+                <div class="card-overlay">
+                  <div class="card-category">
+                    <i class="fas fa-video"></i> Video
+                  </div>
+                </div>
+              </div>
               <div class="card-content">
-                <h3>Project Three</h3>
-                <p>Creative solution for modern challenges</p>
-                <a href="project.html" class="card-link">View Project →</a>
+                <h3>Product Launch Video</h3>
+                <p>
+                  Cinematic product launch video that captured the brand's
+                  innovative spirit and drove pre-orders by 150%.
+                </p>
+                <div class="card-tags">
+                  <span class="tag">Video Production</span>
+                  <span class="tag">Motion Graphics</span>
+                  <span class="tag">Storytelling</span>
+                </div>
+                <a href="project.html" class="card-link">
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
               </div>
             </article>
+          </div>
+          <div class="section-cta">
+            <a href="work.html" class="btn-filled">
+              <i class="fas fa-eye"></i> View All Projects
+            </a>
           </div>
         </div>
       </section>
@@ -85,11 +251,83 @@
 
     <footer>
       <div class="container">
-        <p>&copy; 2026 Portfolio. All rights reserved.</p>
-        <div class="social-links">
-          <a href="#" aria-label="Twitter">Twitter</a>
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
-          <a href="#" aria-label="GitHub">GitHub</a>
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <i class="fas fa-palette"></i>
+              Edmund Kiyanga
+            </div>
+            <p>
+              Creative Marketing Director crafting compelling brand stories and
+              innovative campaigns.
+            </p>
+            <div class="newsletter-signup">
+              <h4>Stay Updated</h4>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4>Navigation</h4>
+              <ul>
+                <li>
+                  <a href="work.html"><i class="fas fa-briefcase"></i> Work</a>
+                </li>
+                <li>
+                  <a href="category.html"
+                    ><i class="fas fa-th-large"></i> Categories</a
+                  >
+                </li>
+                <li>
+                  <a href="cv.html"><i class="fas fa-file-alt"></i> CV</a>
+                </li>
+                <li>
+                  <a href="about.html"><i class="fas fa-user"></i> About</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="branding-types.html">Brand Strategy</a></li>
+                <li><a href="digital-types.html">Digital Marketing</a></li>
+                <li><a href="print-types.html">Print Design</a></li>
+                <li><a href="video-types.html">Video Production</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>Connect</h4>
+              <div class="social-links">
+                <a href="#" aria-label="Twitter" class="social-link">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" aria-label="LinkedIn" class="social-link">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" aria-label="Instagram" class="social-link">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" aria-label="Behance" class="social-link">
+                  <i class="fab fa-behance"></i>
+                </a>
+                <a href="#" aria-label="Dribbble" class="social-link">
+                  <i class="fab fa-dribbble"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Edmund Kiyanga. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
         </div>
       </div>
     </footer>
